@@ -5,7 +5,13 @@
   "main": "src/app.js",
   "scripts": {
     "start": "node src/main",
-    "test": "jest"
+    "test": "jest",
+    "test-jenkins": "jest --reporters=default --reporters=jest-junit"
+  },
+  "jest-junit": {
+    "outputDirectory": "./coverage/",
+    "outputName": "test.results.xml",
+    "usePathForSuiteName": "true"
   },
   "author": "",
   "license": "ISC",
@@ -14,6 +20,7 @@
   },
   "devDependencies": {
     "jest": "^27.5.1",
+    "jest-junit": "^13.0.0",
     "supertest": "^6.2.2"
   }
 }
