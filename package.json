@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node src/main",
     "test": "jest",
-    "test-jenkins": "jest --reporters=default --reporters=jest-junit"
+    "test-jenkins": "jest --reporters=default --reporters=jest-junit",
+    "coverage-jenkins": "jest --reporters=default --reporters=jest-junit --coverage --coverageReporters=text --coverageReporters=html --coverageDirectory=./coverage/"
   },
   "jest-junit": {
     "outputDirectory": "./coverage/",
