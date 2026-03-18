@@ -1,0 +1,9 @@
+node_modules/
+.git/
+coverage/
+*.test.js
+src/*.test.js
+src/**/*.test.js
+.eslint*
+jest.config*
+.prettier*
