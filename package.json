@@ -8,7 +8,8 @@
     "test": "jest",
     "test-jenkins": "jest --reporters=default --reporters=jest-junit",
     "coverage-jenkins": "jest --reporters=default --reporters=jest-junit --coverage --coverageReporters=text --coverageReporters=html --coverageDirectory=./coverage/",
-    "lint": "eslint src/**/*.js -f checkstyle -o coverage/eslint-result.xml"
+    "lint": "eslint src/**/*.js -f checkstyle -o coverage/eslint-result.xml",
+    "lint:json": "eslint src/**/*.js --format json -o coverage/eslint-result.json"
   },
   "jest-junit": {
     "outputDirectory": "./coverage/",
@@ -30,3 +31,4 @@
     "supertest": "^6.2.2"
   }
 }
+
