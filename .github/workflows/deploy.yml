@@ -31,9 +31,9 @@ jobs:
       - name: Deploy
         run: |
           ssh azureuser@${{ secrets.SSH_HOST }} "if [ ! -d 'nodeapp' ]; then \
-              git clone https://github.com/ualcnsa/nodeapp.git; \
+              git clone https://github.com/aek676/nodeapp.git; \
             else \
-              cd nodeapp && git stash && git fetch --all && git reset --hard origin/master && git pull origin master; \
+              cd nodeapp && git stash && git fetch --all && git reset --hard origin/main && git pull origin main; \
             fi"  
           ssh azureuser@${{ secrets.SSH_HOST }} "if pgrep node; then forever stopall; fi" 
           ssh azureuser@${{ secrets.SSH_HOST }} "cd nodeapp && npm install" 
