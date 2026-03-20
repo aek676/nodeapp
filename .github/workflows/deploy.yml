@@ -36,6 +36,5 @@ jobs:
               cd nodeapp && git stash && git fetch --all && git reset --hard origin/main && git pull origin main; \
             fi"  
           ssh azureuser@${{ secrets.SSH_HOST }} "if pgrep node; then forever stopall; fi" 
-          ssh azureuser@${{ secrets.SSH_HOST }} "cd nodeapp && npm install" 
-          ssh azureuser@${{ secrets.SSH_HOST }} "cd nodeapp && PORT=8080 forever start src/main.js"
-
+          ssh azureuser@${{ secrets.SSH_HOST }} "source /home/azureuser/.nvm/nvm.sh && cd nodeapp && npm install"
+          ssh azureuser@${{ secrets.SSH_HOST }} "source /home/azureuser/.nvm/nvm.sh && cd nodeapp && PORT=8080 forever start src/main.js"
